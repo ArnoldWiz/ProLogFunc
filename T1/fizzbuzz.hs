@@ -34,4 +34,4 @@ numeroPalabras n
 
 -- main
 main :: IO ()
-main = mapM_ (putStrLn . fizzBuzz) [1..27]
+main = mapM_ (putStrLn . fizzBuzz) [1..100]
