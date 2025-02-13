@@ -17,13 +17,20 @@ esPrimo n
 -- Conversion a palabras
 numeroPalabras :: Int -> String
 numeroPalabras 0 = "cero"
+numeroPalabras 1000000 = "un millón"
 numeroPalabras n
     | n < 20    = unidades !! (n - 1)
     | n < 100   = if n `mod` 10 == 0 then decenas !! (n `div` 10 - 2)
                   else decenas !! (n `div` 10 - 2) ++ " y " ++ unidades !! (n `mod` 10 - 1)
-    | n < 1000  =
-    | n < 1000000 =
-    | otherwise = "No valido"
+    | n < 1000  = if n `mod` 100 == 0 then centenas !! (n `div` 100 - 1)
+                  else centenas !! (n `div` 100 - 1) ++ " " ++ numeroPalabras (n `mod` 100)
+    | n < 10000 = if n `mod` 1000 == 0 then numeroPalabras (n `div` 1000) ++ " mil"
+                  else numeroPalabras (n `div` 1000) ++ " mil " ++ numeroPalabras (n `mod` 1000)
+    | n < 1000000 = if n `mod` 100000 == 0 then numeroPalabras (n `div` 100000) ++ " cien mil"
+                    else numeroPalabras (n `div` 1000) ++ " mil " ++ numeroPalabras (n `mod` 1000)
+    | n < 100000000 = if n `mod` 1000000 == 0 then numeroPalabras (n `div` 1000000) ++ " millones"
+                      else numeroPalabras (n `div` 1000000) ++ " millones " ++ numeroPalabras (n `mod` 1000000)
+    | otherwise = "No adecuado"
   where
     unidades = ["uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve",
                 "diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve"]
@@ -32,9 +39,7 @@ numeroPalabras n
 
     centenas = ["cien", "doscientos", "trescientos", "cuatrocientos", "quinientos", "seiscientos", "setecientos", "ochocientos", "novecientos"]
 
-    miles x  = if x == 1 then "mil" else numeroPalabras x ++ " mil"
-
 main :: IO ()
 main = do
-    print $ fizzBuzz 2  
-    print $ fizzBuzz 15  
+    print $ fizzBuzz 7451232
+    print $ fizzBuzz 53
