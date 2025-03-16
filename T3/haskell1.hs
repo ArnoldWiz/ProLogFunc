@@ -37,6 +37,8 @@ asignaturas n = Map.mapKeys (map toUpper) (Map.map calificacion n)
 modulo :: [Double] -> Double
 modulo v = sqrt (sum (map (^2) v))
 
+
+--atipico
 media :: [Double] -> Double
 media lista = sum lista / fromIntegral (length lista)
 
