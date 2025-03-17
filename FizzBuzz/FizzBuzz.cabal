@@ -3,8 +3,8 @@ name:               FizzBuzz
 version:            0.1.0.0
 license:            BSD-3-Clause
 license-file:       LICENSE
-author:             Chelsea
-maintainer:         s22120160@alumnos.itsur.edu.mx
+author:             ArnoldWiz
+maintainer:         s22120249@alumnos.itsur.edu.mx
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md
 

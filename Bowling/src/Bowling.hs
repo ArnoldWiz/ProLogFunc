@@ -37,3 +37,4 @@ scorePlay :: [Int] -> Maybe Int
 scorePlay pins = do
   frames <- toFrames pins
   return $ score frames
+  

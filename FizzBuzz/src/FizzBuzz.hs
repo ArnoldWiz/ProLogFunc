@@ -28,3 +28,4 @@ number n
   | n `mod` 10 == 0 && n < 100 = tens (n `div` 10)
   | n < 100 = tens (n `div` 10) ++ " " ++ lessThan20 (n `mod` 10)
   | n == 100 = "one hundred"
+  
