@@ -111,3 +111,29 @@ uso_para(Enfermedad, Forma) :- buena_para(Planta, Enfermedad), forma_uso(Planta,
 
 % Obtener una lista de plantas que ayudan con una enfermedad
 plantas_para(Enfermedad, Lista) :- findall(Planta, buena_para(Planta, Enfermedad), Lista).
+
+/* 
+Consultas
+
+% ¿Qué planta es buena para el insomnio?
+?- buena_para(Planta, insomnio).
+Planta = pasiflora.
+
+% ¿Qué plantas ayudan a combatir infecciones?
+?- plantas_para(infecciones, Lista).
+Lista = [palo_de_flor, pinguica].
+
+% ¿Qué forma de uso tiene el orégano?
+?- forma_uso(oregano, Forma).
+Forma = infusion.
+
+% ¿Qué plantas sirven para el sistema nervioso?
+?- sirve_para_sistema(Planta, sistema_nervioso).
+Planta = pasiflora ;
+Planta = pericon.
+
+% ¿Qué forma de uso sirve para infecciones urinarias?
+?- uso_para(infecciones_urinarias, Forma).
+Forma = cocimiento.
+
+*/
