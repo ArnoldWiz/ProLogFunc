@@ -34,6 +34,32 @@ significado(antifungica,elimina_hongos).
 significado(antiparasitaria,elimina_parasitos).
 significado(antioxidante,previene_envejecimiento).
 
+% MEDICAMENTO ACTUAL DERIVADO DE PLANTA
+medicamento_actual(digitalina, digital).
+medicamento_actual(tonico_cardiaco, digital).
+medicamento_actual(morfina,opio).
+medicamento_actual(codeina,opio).
+medicamento_actual(etina,ipeca).
+medicamento_actual(estricinina,nuez_vomica).
+medicamento_actual(veratrina,eleboro).
+medicamento_actual(colquicina,colchico).
+medicamento_actual(atropina,belladona).
+medicamento_actual(quinina,quina).
+medicamento_actual(teobromina,cacao).
+medicamento_actual(esparteina,retama).
+medicamento_actual(cocaina,coca).
+medicamento_actual(mescalina,teyote).
+medicamento_actual(efedrina,efedra).
+medicamento_actual(hormonas,barrasco).
+medicamento_actual(luteurina,nenufar_amarillo).
+medicamento_actual(diosponina,niame).
+medicamento_actual(tauremisina,artemisa).
+medicamento_actual(olitorisida,semilla_yute).
+medicamento_actual(acido_lisergico,toloache).
+medicamento_actual(eucaliptol,eucalipto).
+medicamento_actual(vitamina_c,rosal).
+medicamento_actual(quercitrina,rosal).
+
 %HECHOS
 % Plantas
 planta(oregano).
